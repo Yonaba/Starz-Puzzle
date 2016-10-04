@@ -8,20 +8,14 @@ A small Lua puzzle game written for the sake of LÖVE (0.8.0)
 
 ##Gameplay
 
-Starz Puzzle is a action/strategy-based game.
-You have a limited amount of time to collect all the stars of a given level.
-Some blocks will hinder you and you will smart moves to clear your path.
+Starz Puzzle is a strategy game where you have a limited amount of time to collect all the stars on a given level.<br/>
+Some blocks will hinder you. Make smart moves to clear your path.<br/>
 
-Warning! You can only push blocks, not pull them.
-And also you cannot push two blocks simultaneously, nor send a block over a star.
-And hurry up, for the clock is ticking!
-The longer it takes, the lesser points you will earn collecting stars.
-
-##Controls
-
-Move with directional buttons: Up / Down / Left / Right
+Warning! You can only push blocks, not pull them. <br/>
+The longer it takes you to collect stars, the lower the points you are getting. <br/>
+Hurry up, clock is ticking! <br/>
 
 ##License
-Copyright (c) 2012 Roland Yonaba
-This soource code of this game MIT Licensed.
+Copyright (c) 2012 Roland Yonaba<br/>
+The source code of this game MIT Licensed.
 
