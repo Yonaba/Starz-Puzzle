@@ -1,0 +1,1 @@
+--------------------------------------------------------------------------------- Copyright (c) 2012 - Roland Yonaba-- Static entities-------------------------------------------------------------------------------local Entity = require 'src.entity.base.entity'local StaticEntity = Entity:extends()return StaticEntity

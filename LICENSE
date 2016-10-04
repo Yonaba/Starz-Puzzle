@@ -1,21 +1,42 @@
-MIT License
+Starz Puzzle Source Code
 
-Copyright (c) 2016 Roland
+	MIT License
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+	Copyright (c) 2012 Roland Yonaba
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+	The above copyright notice and this permission notice shall be included in all
+	copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+	SOFTWARE.
+
+Framework : 
+	Löve2D Framework (http://love2d.org)
+	Copyright (c) 2006-2012 LOVE Development Team, ZLIB License
+	
+Arts & Design: 
+	Planet Cute Tileset, by Daniel Cook (http://lostgarden.com)
+	Lost Garden License, Creative Commons Attribution 3.0 License
+	
+Sounds:
+	All *.ogg sounds were generated from SFXR (Sound effect generator)
+		SFXR, by Tomas Pettersson (http://www.drpetter.se)
+		Copyright (c) 2007, MIT-License
+		
+	Background.mp3 - was taken from Free-Loops Online Database
+		Bleep Beat Synth (140BPM), by Florian Chaillou (http://free-loops.com/8451-bleep-beat.html)
+		Copyright (c) - Creative Commons Audio: Non Member Attribution License
+		
+
