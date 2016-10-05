@@ -8,6 +8,18 @@ local serialize, copy = table.serialize, table.copy
 local optionState = StateManager.new()
 local colors,text,new_config
 
+-- For compatibility with love2d 0.9+
+local function checkMode(w, h, fullscreen)
+  if fullscreen then return true end
+  local modes = love.window.getFullscreenModes()
+  for i = 1, #modes do
+    if modes[i].width == w and modes[i].height == h then
+      return true
+    end
+  end
+  return false
+end
+
 function optionState:enter()
   
   new_config = copy(Config)
@@ -27,7 +39,7 @@ function optionState:enter()
   text = {}
   text.entries = { '', '', '', '' }
   text.entries_supported = {
-    love.graphics.checkMode(love.graphics.getWidth(), love.graphics.getHeight(),true),
+    (love.graphics.checkMode or checkMode)(love.graphics.getWidth(), love.graphics.getHeight(),true),
     true,
     true,
     true,
@@ -87,8 +99,20 @@ function optionState:enter()
   end,'pressed','right','left')
   
   Input.bindKeys(function(key)
-    assert(love.graphics.setMode(love.graphics.getWidth(), love.graphics.getHeight(), new_config.fullscreen, new_config.vsync,0),
-            ('Error encountered when changing the display mode!'))
+    if love.graphics.setMode then
+      assert(love.graphics.setMode(love.graphics.getWidth(), love.graphics.getHeight(), new_config.fullscreen, new_config.vsync,0),
+              ('Error encountered when changing the display mode!'))
+    else
+      local msaa = "msaa"
+      if love._version_major == 0 and love._version_minor < 10 then
+        msaa = "fsaa"
+      end
+      assert(love.window.setMode(love.graphics.getWidth(),
+                                 love.graphics.getHeight(),
+                                 {fullscreen = new_config.fullscreen,
+                                  vsync = new_config.vsync, [msaa] = 0}),
+              ('Error encountered when changing the display mode!'))
+    end
     for name,setting in pairs(new_config) do 
       Config[name] = setting 
     end

@@ -15,9 +15,21 @@ function Star:__init(x,y, tile_width, tile_height, tile_gap_up, tile_gap_down)
   -- Particle effect
   local particleSystem = love.graphics.newParticleSystem(Asset.Image.Star, 8)
   particleSystem:setEmissionRate(3)
-  particleSystem:setParticleLife(2)
-  particleSystem:setGravity(-20)
-  particleSystem:setSizes(1.0, 0.8, 0.4, 0.1)
+  if particleSystem.setParticleLife then
+    particleSystem:setParticleLife(2)
+  else
+    particleSystem:setParticleLifetime(2)
+  end
+  if particleSystem.setGravity then
+    particleSystem:setGravity(-20)
+  else
+    particleSystem:setLinearAcceleration(0, -20)
+  end
+  if particleSystem.setSizes then
+    particleSystem:setSizes(1.0, 0.8, 0.4, 0.1)
+  else
+    particleSystem:setSize(1.0, 0.2)
+  end
   self:setImg(particleSystem)
   
   self.min_value, self.max_value = 100, 1000

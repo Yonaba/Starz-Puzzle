@@ -21,10 +21,21 @@ function love.load()
     Config = table.deserialize('config.lua')
   end
   -- Setting up display
-  love.graphics.setMode(
+  if love.graphics.setMode then
+    love.graphics.setMode(
+        love.graphics.getWidth(), love.graphics.getHeight(),
+        Config.fullscreen, Config.vsync, 0
+    )
+  else
+    local msaa = "msaa"
+    if love._version_major == 0 and love._version_minor < 10 then
+      msaa = "fsaa"
+    end
+    love.window.setMode(
       love.graphics.getWidth(), love.graphics.getHeight(),
-      Config.fullscreen, Config.vsync, 0
-  )  
+      {fullscreen=Config.fullscreen, vsync=Config.vsync, [msaa]=0}
+    )
+  end
 
   -- Libs
   Asset = require 'src.assets'

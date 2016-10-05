@@ -34,7 +34,7 @@ function gameState:enter(_,args)
   Input.bindKeys(function()
     if currentLevel.is_clear then
       local current_level_number = tonumber(currentLevel.name)
-      if (current_level_number < #love.filesystem.enumerate('levels')) then
+      if (current_level_number < #(love.filesystem.enumerate or love.filesystem.getDirectoryItems)('levels')) then
         currentLevel:__init(tostring(current_level_number+1))
       else
         StateManager.switch('menu_state')
