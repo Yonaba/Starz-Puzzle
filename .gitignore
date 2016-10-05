@@ -1,4 +1,6 @@
 *.dll
 *.exe
 *.txt
+bin*
+love*
 
