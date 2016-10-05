@@ -18,7 +18,8 @@ function menuState:enter()
   text = {}
   text.start_text, text.spacing = 320, 50
   text.selected_entry, text.selected_level = 1, 1
-  text.max_levels = #love.filesystem.enumerate('levels')
+  text.max_levels = #(love.filesystem.enumerate
+                      or love.filesystem.getDirectoryItems)('levels')
   text.entries = {'Play','','Options','Exit'}
   if love.filesystem.exists('scores.lua') then
     table.insert(text.entries,4,'Reset Scores')
