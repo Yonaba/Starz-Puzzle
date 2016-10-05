@@ -9,7 +9,7 @@ function love.conf(config)
   config.title = "Starz Puzzle"
   config.author = "Roland_Yonaba"
   config.url = "https://yonaba.github.io/Starz-Puzzle"
---	config.version = "0.8.0"
+	--	config.version = "0.8.0"
 	config.release = false
 	config.identity = "starz puzzle"
 

@@ -29,7 +29,7 @@ function gameState:enter(_,args)
   Input.bindKeys(function()
     currentLevel.was_quitted = true
     StateManager.switch('menu_state')
-  end,'pressed',';')
+  end,'pressed','m')
   
   Input.bindKeys(function()
     if currentLevel.is_clear then
